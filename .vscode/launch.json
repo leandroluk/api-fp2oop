@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "server",
+      "type": "pwa-node",
+      "request": "launch",
+      "runtimeExecutable": "ts-node",
+      "runtimeArgs": [
+        "-r",
+        "tsconfig-paths/register",
+      ],
+      "args": [
+        "${workspaceRoot}/src",
+      ],
+      "cwd": "${workspaceRoot}",
+      "envFile": "${workspaceFolder}/.env",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**"
+      ],
+      "outputCapture": "std"
+    }
+  ],
+  "compounds": []
+}

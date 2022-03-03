@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "target": "es2020",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "lib": [
+      "es2020",
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "$/*": [
+        "./src/*"
+      ]
+    },
+  },
+  "include": [
+    "tsconfig.json",
+    "package.json",
+    "**/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

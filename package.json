@@ -1,10 +1,9 @@
 {
   "name": "api-fp2oop",
   "version": "1.0.0",
-  "description": "Esse projeto foi criado para poder demonstrar como é a modificação de uma api construída em programação funcional para a programação orientada a objetos. O projeto foi estruturado de forma que somente a solução (pasta `app`) sofra evolução visto que o express é uma biblioteca externa e a mesma já trabalha com programação funcional. Também serão aplicados ao logo das mudanças (definidas pelas branches) conceitos como injeção de dependência e solid.",
-  "main": "index.js",
   "scripts": {
     "db:create": "node ./mist/db.js",
+    "start": "cross-env NODE_ENV=local ts-node -r dotenv/config -r tsconfig-paths/register src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +20,17 @@
   "devDependencies": {
     "dotenv": "^16.0.0",
     "mysql2": "^2.3.3"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "eslint": "^7.32.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "ts-node": "^10.6.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.6.2"
   }
 }
