@@ -21,5 +21,6 @@
     "barrelr.useSemiColons": false,
     "barrelr.useDoubleQuotes": false,
     // git
-    "git.inputValidation": "off"
+    "git.inputValidation": "off",
+    "thunder-client.loadFromProject": true
   }

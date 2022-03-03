@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "firsttris.vscode-jest-runner",
+    "eg2.vscode-npm-script",
+    "rangav.vscode-thunder-client",
+    "mikerhyssmith.ts-barrelr",
+    "vscode-icons-team.vscode-icons",
+    "redhat.vscode-yaml",
+    "redhat.vscode-xml"
+  ]
+}
