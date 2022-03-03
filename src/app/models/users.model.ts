@@ -10,10 +10,6 @@ const checkErrorDuplicateEntry = (error: Error): void => {
   }
 }
 
-// const convertDateToMysql = (date: Date): string => {
-//   return date.toJSON().replace('T', ' ').replace('Z', '')
-// }
-
 export const usersModel = {
   async get(
     id: User['id']
