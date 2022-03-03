@@ -1,7 +1,7 @@
-import { UsersController } from '$/app/controllers'
+import { usersFactory } from '$/app/factories'
 import { Request, Response, Router } from 'express'
 
-const usersController = new UsersController()
+const usersController = usersFactory()
 
 const get = async (req: Request, res: Response): Promise<void> => {
   const id = Number(req.params.id)

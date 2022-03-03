@@ -3,7 +3,9 @@ import { UsersService } from '$/app/services'
 import { usersValidator } from '$/app/validators'
 
 export class UsersController {
-  usersService = new UsersService()
+  constructor(
+    readonly usersService: UsersService
+  ) { }
 
   async get(
     id: User['id']

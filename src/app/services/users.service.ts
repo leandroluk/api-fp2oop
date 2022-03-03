@@ -5,7 +5,9 @@ import { UsersModel } from '$/app/models'
 const NOT_FOUND = 'User not found.'
 
 export class UsersService {
-  usersModel = new UsersModel()
+  constructor(
+    readonly usersModel: UsersModel
+  ) { }
 
   async get(
     id: User['id']
