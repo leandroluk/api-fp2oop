@@ -13,7 +13,3 @@ export type User = Entity & {
   email: string
   password: string
 }
-
-// generics
-
-
