@@ -1,9 +1,11 @@
 import { Entity, User } from '$/app/domain'
 import { NotFoundError } from '$/app/errors'
 import { UsersModel } from '$/app/models'
+import { Service } from 'typedi'
 
 const NOT_FOUND = 'User not found.'
 
+@Service()
 export class UsersService {
   constructor(
     readonly usersModel: UsersModel

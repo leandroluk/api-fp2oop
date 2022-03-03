@@ -1,4 +1,5 @@
 import db from '$/app/db'
+import 'reflect-metadata'
 
 // lazy load app only if database is connected
 db.query('SELECT 1')

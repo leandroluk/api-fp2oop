@@ -1,7 +1,8 @@
-import { usersFactory } from '$/app/factories'
+import { UsersController } from '$/app/controllers'
 import { Request, Response, Router } from 'express'
+import Container from 'typedi'
 
-const usersController = usersFactory()
+const usersController = Container.get(UsersController)
 
 const get = async (req: Request, res: Response): Promise<void> => {
   const id = Number(req.params.id)

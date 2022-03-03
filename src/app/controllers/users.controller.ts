@@ -1,7 +1,9 @@
 import { Entity, User } from '$/app/domain'
 import { UsersService } from '$/app/services'
 import { usersValidator } from '$/app/validators'
+import { Service } from 'typedi'
 
+@Service()
 export class UsersController {
   constructor(
     readonly usersService: UsersService

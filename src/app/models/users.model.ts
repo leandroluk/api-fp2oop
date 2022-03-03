@@ -1,6 +1,7 @@
 import db from '$/app/db'
 import { Entity, User } from '$/app/domain'
 import { ResultSetHeader, RowDataPacket } from 'mysql2'
+import { Service } from 'typedi'
 
 const TABLE = 'users'
 
@@ -10,6 +11,7 @@ const checkErrorDuplicateEntry = (error: Error): void => {
   }
 }
 
+@Service()
 export class UsersModel {
   async get(
     id: User['id']
