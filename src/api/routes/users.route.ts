@@ -1,5 +1,7 @@
-import { usersController } from '$/app/controllers'
+import { UsersController } from '$/app/controllers'
 import { Request, Response, Router } from 'express'
+
+const usersController = new UsersController()
 
 const get = async (req: Request, res: Response): Promise<void> => {
   const id = Number(req.params.id)

@@ -10,14 +10,14 @@ const checkErrorDuplicateEntry = (error: Error): void => {
   }
 }
 
-export const usersModel = {
+export class UsersModel {
   async get(
     id: User['id']
   ): Promise<User> {
     const sql = `SELECT * FROM ${TABLE} WHERE id = ?`
     const [[row]] = await db.query<RowDataPacket[]>(sql, [id])
     return row as User
-  },
+  }
 
   async edit(
     id: User['id'],
@@ -45,7 +45,7 @@ export const usersModel = {
       checkErrorDuplicateEntry(error)
       throw error
     }
-  },
+  }
 
   async remove(
     id: User['id']
@@ -59,7 +59,7 @@ export const usersModel = {
       checkErrorDuplicateEntry(error)
       throw error
     }
-  },
+  }
 
   async add(
     data: Omit<User, keyof Entity>
@@ -80,7 +80,7 @@ export const usersModel = {
       checkErrorDuplicateEntry(error)
       throw error
     }
-  },
+  }
 
   async list(): Promise<User[]> {
     const sql = `
