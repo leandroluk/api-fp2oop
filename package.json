@@ -1,0 +1,25 @@
+{
+  "name": "api-fp2oop",
+  "version": "1.0.0",
+  "description": "Esse projeto foi criado para poder demonstrar como é a modificação de uma api construída em programação funcional para a programação orientada a objetos. O projeto foi estruturado de forma que somente a solução (pasta `app`) sofra evolução visto que o express é uma biblioteca externa e a mesma já trabalha com programação funcional. Também serão aplicados ao logo das mudanças (definidas pelas branches) conceitos como injeção de dependência e solid.",
+  "main": "index.js",
+  "scripts": {
+    "db:create": "node ./mist/db.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandroluk/api-fp2oop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandroluk/api-fp2oop/issues"
+  },
+  "homepage": "https://github.com/leandroluk/api-fp2oop#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "mysql2": "^2.3.3"
+  }
+}
