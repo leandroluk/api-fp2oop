@@ -1,4 +1,4 @@
-import { Entity, User } from '$/domain'
+import { Entity, User } from '$/app/domain'
 import Joi from 'joi'
 
 export const usersValidator = {

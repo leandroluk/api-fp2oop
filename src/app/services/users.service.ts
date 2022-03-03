@@ -1,6 +1,6 @@
-import { Entity, User } from '$/domain'
-import { NotFoundError } from '$/errors'
-import { usersModel } from '$/models'
+import { Entity, User } from '$/app/domain'
+import { NotFoundError } from '$/app/errors'
+import { usersModel } from '$/app/models'
 
 const NOT_FOUND = 'User not found.'
 

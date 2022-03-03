@@ -1,6 +1,6 @@
-import { Entity, User } from '$/domain'
-import { usersService } from '$/services'
-import { usersValidator } from '$/validators'
+import { Entity, User } from '$/app/domain'
+import { usersService } from '$/app/services'
+import { usersValidator } from '$/app/validators'
 
 export const usersController = {
   async get(

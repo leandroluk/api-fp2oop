@@ -1,5 +1,5 @@
-import db from '$/db'
-import { Entity, User } from '$/domain'
+import db from '$/app/db'
+import { Entity, User } from '$/app/domain'
 import { ResultSetHeader, RowDataPacket } from 'mysql2'
 
 const TABLE = 'users'
