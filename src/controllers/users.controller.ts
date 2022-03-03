@@ -1,52 +1,46 @@
+import { Entity, User } from '$/domain'
 import { usersService } from '$/services'
 import { usersValidator } from '$/validators'
-import { Request, Response } from 'express'
 
 export const usersController = {
   async get(
-    req: Request,
-    res: Response
-  ): Promise<void> {
-    const id = await usersValidator.id(req.params.id)
+    id: User['id']
+  ): Promise<User> {
+    id = await usersValidator.id(id)
     const result = await usersService.get(id)
-    res.json(result)
+    return result
   },
 
   async edit(
-    req: Request,
-    res: Response
-  ): Promise<void> {
-    const [id, changes] = await Promise.all([
-      usersValidator.id(req.params.id),
-      usersValidator.edit(req.body)
+    id: User['id'],
+    changes: Partial<Omit<User, keyof Entity>>
+  ): Promise<User> {
+    [id, changes] = await Promise.all([
+      usersValidator.id(id),
+      usersValidator.edit(changes)
     ])
     const result = await usersService.edit(id, changes)
-    res.json(result)
+    return result
   },
 
   async remove(
-    req: Request,
-    res: Response
-  ): Promise<void> {
-    const id = await usersValidator.id(req.params.id)
-    await usersService.remove(id)
-    res.send()
+    id: User['id']
+  ): Promise<boolean> {
+    id = await usersValidator.id(id)
+    const result = await usersService.remove(id)
+    return result
   },
 
   async add(
-    req: Request,
-    res: Response
-  ): Promise<void> {
-    const data = await usersValidator.add(req.body)
+    data: Omit<User, keyof Entity>
+  ): Promise<User> {
+    data = await usersValidator.add(data)
     const result = await usersService.add(data)
-    res.status(201).json(result)
+    return result
   },
 
-  async list(
-    _: Request,
-    res: Response
-  ): Promise<void> {
+  async list(): Promise<User[]> {
     const result = await usersService.list()
-    res.json(result)
+    return result
   }
 }
