@@ -42,7 +42,7 @@ Nesse passo é feita a configuração mínima para a criação de uma aplicaçã
 
 Além disso, para que possamos utilizar a importação de arquivos através dos path's do typescript, também é feito uso da biblioteca [tsconfig-paths](https://www.npmjs.com/package/tsconfig-paths). Essa lib faz a leitura dos paths declarados no arquivo do typescript e então já faz a resolução sem erros inclusive ao fazer o build da solução.
 
-## [02 - Exemplo de projeto mínimo utilizando Typescript + Express + Joi + MySQL](https://github.com/leandroluk/api-fp2oop/tree/02-projeto-minimo-msc-express)
+## [02 - Exemplo de projeto mínimo utilizando Typescript + Express + Joi + MySQL](https://github.com/leandroluk/api-fp2oop/tree/02)
 
 Nesse passo, o projeto desenvolvido aplica o padrão MSC (Model-Service-Controller) onde o Model cuida de gerenciar o banco de dados, o Service mantém todas as regras de negócio da solução e o Controller faz a interface da API. Além disso também foram adicionados outras pastas como:
 
@@ -51,22 +51,22 @@ Nesse passo, o projeto desenvolvido aplica o padrão MSC (Model-Service-Controll
 
 Também existe um arquivo centralizador que serve para declaração dos tipos da aplicação, o `domain.ts`
 
-## [03 - Aplicando boas práticas à utilização de bibliotecas externas](https://github.com/leandroluk/api-fp2oop/tree/03-aplicando-boas-praticas)
+## [03 - Aplicando boas práticas à utilização de bibliotecas externas](https://github.com/leandroluk/api-fp2oop/tree/03)
 
 Para que possamos aplicar as boas práticas à nossa aplicação sem que haja a dependência do express, a mesma é desacoplada em 2 camadas sendo as rotas e os controllers. Isso se mostra necessário pois existem outras formas de se formar uma API (ex: graphql) e outras formas de se chamar a aplicação como a utilização de filas (ex: rabbitmq), outros protocolos como o gRPC e afins. Toda solução deve ser construída de forma que possa extraír uma biblioteca sem impactar no todo.
 
-## [04 - Extraindo camada de api da aplicação](https://github.com/leandroluk/api-fp2oop/tree/04-extraindo-camada-api-da-aplicacao)
+## [04 - Extraindo camada de api da aplicação](https://github.com/leandroluk/api-fp2oop/tree/04)
 
 Pensando ainda em otimização da solução, aqui nós extraímos todo o código da nossa solução que é acessado através da API RESTful. Isso é importante pois caso eu queira seguir com o raciocínio do item 3, utilizando minha solução também com um RabbitMQ como por exemplo, ele não deve se misturar ao código comum da API visto que são 2 contextos diferentes mas ele deve acessar minha solução.
 
-## [05 - Transformando aplicação em Orientação a Objetos (OOP)](https://github.com/leandroluk/api-fp2oop/tree/05-tranformando-aplicacao-oop)
+## [05 - Transformando aplicação em Orientação a Objetos (OOP)](https://github.com/leandroluk/api-fp2oop/tree/05)
 
 A solução foi construída com constantes onde os recursos são métodos dentro destes objetos para demonstrar como uma classe pode ser tratada em um ambiente modular. Para a conversão da mesma basta fazer a transformação em classes e adicionar instâncias das mesmas onde for necessário
 
-## [06 - Aplicando injeção de dependência](https://github.com/leandroluk/api-fp2oop/tree/06-aplicando-injecao-de-dependencia)
+## [06 - Aplicando injeção de dependência](https://github.com/leandroluk/api-fp2oop/tree/06)
 
 Pensando em SOLID, um dos principais conceitos para um "código limpo" seria a inversão (ou injeção) de dependência. A idéia é que para a classe funcionar você passe a mesma o que ela precisa fazer. Assim é possível criar múltiplas formas de utilização da mesma sem a necessidade de alterá-la.
 
-## [07 - Melhorando a injeção de dependência](https://github.com/leandroluk/api-fp2oop/tree/07-otimizando-injecao-de-dependencia)
+## [07 - Melhorando a injeção de dependência](https://github.com/leandroluk/api-fp2oop/tree/07)
 
 Em Typescript podemos fazer a injeção utilizando a bibliteca [TypeDI](https://github.com/typestack/typedi) assim como é feito em outras linguagens.
