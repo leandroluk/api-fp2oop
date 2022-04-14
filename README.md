@@ -36,7 +36,7 @@ As evoluções do projeto serão marcadas através das mudanças entre as branch
 
 O projeto inicialmente será criado com a arquitetura MSC (Model-Service-Controller) para que possamos apresentar a evolução do mesmo. A seguir estão as branches que serão criadas no projeto junto com o link de cada uma:
 
-## [01 - Configuração do ambiente](https://github.com/leandroluk/api-fp2oop/tree/01-configuracao-do-ambiente)
+## [01 - Configuração do ambiente](https://github.com/leandroluk/api-fp2oop/tree/01)
 
 Nesse passo é feita a configuração mínima para a criação de uma aplicação em typescript que utiliza como padrão um modelo de regras básico, personalizável e de acordo com as melhores práticas para typescript: [eslint-config-standard-with-typescript](https://www.npmjs.com/package/eslint-config-standard-with-typescript). 
 
